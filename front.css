@@ -4,6 +4,7 @@ body {
     background: #f5f7fa;
     margin: 0;
     padding: 0;
+    background: url('bg.webp') center/cover no-repeat fixed;
 }
 
 body::after {
@@ -18,6 +19,14 @@ body::after {
     filter: blur(5px);
     width: 100vw;
     height: 100vh;
+}
+
+.bg-blur {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: url('bg.webp') center/cover no-repeat;
+    filter: blur(5px);
+    z-index: -1;
 }
 
 /* HEADER */
