@@ -73,13 +73,17 @@ main {
 
 
 .customize-link{
+    display: none;
     opacity: 0;
+    color: blue;
 }
 
 .customize-link.show {
+    display: inline-block;
     margin-top: 20px;
     margin-left: 12px;
     animation: fadeInUpCustomize 1s forwards;
+    color: blue;
 }
 
 /*ANIMATION*/

@@ -10,12 +10,12 @@ document.querySelectorAll('.week-container').forEach(container => {
         });
 
         // shows link 
-        const customizeLink = this.querySelector('.customize-link');
-        if (customizeLink) {
-            customizeLink.style.display = 'inline-block';
-            void customizeLink.offsetWidth;
-            customizeLink.classList.add('show');
-        }
+        const links = this.querySelectorAll('.customize-link');
+        links.forEach(link => {
+            link.style.display = 'inline-block';
+            void link.offsetWidth; // trigger reflow for animation
+            link.classList.add('show');
+        });
     });
 });
 
