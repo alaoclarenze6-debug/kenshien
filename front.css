@@ -62,3 +62,54 @@ header h2{
     font-size: 4.5vw;
   }
 }
+
+
+
+
+/*design*/
+
+.menu-toggle {
+    width: 30px;
+    height: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    margin: 1rem;
+    border: black solid;
+    padding: 6px;
+}
+
+.menu-toggle span {
+  display: block;
+  height: 4px;
+  background: #333;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+
+}
+
+/* Toggle animation */
+.menu-toggle.active span:nth-child(1) {
+   transform: rotate(90deg) translateY(13px) translateX(8px);
+}
+
+.menu-toggle.active span:nth-child(2) {
+    transform: rotate(90deg) translateX(-3px);
+
+}
+
+.menu-toggle.active span:nth-child(3) {
+    transform: rotate(90deg) translateX(-13px) translateY(-12px);
+}
+
+/* Links show/hide */
+.menu-links {
+  display: none;
+  flex-direction: column;
+  margin-top: 1rem;
+}
+
+.menu-links.active {
+  display: flex;
+}
