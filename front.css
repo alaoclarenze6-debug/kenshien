@@ -3,7 +3,6 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background: url('bg.webp') center/cover no-repeat fixed;
 }
 
 /* BACKGROUND BLUR */
@@ -12,7 +11,6 @@ body::after, .bg-blur {
   position: fixed;
   top: 0; left: 0; right: 0; bottom: 0;
   z-index: -1;
-  background: url('bg.webp') center/cover no-repeat;
   filter: blur(5px);
   width: 100vw;
   height: 100vh;
@@ -20,30 +18,20 @@ body::after, .bg-blur {
 
 /* HEADER */
 header {
-  background: rgba(243, 141, 141, 0.25);
-  color: #222;
   padding: 2rem 1rem;
   text-align: center;
-  box-shadow: 0 2px 16px rgba(0,0,0,0.10);
-  border-radius: 0 0 24px 24px;
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  margin-bottom: 2rem;
-  position: relative;
-  z-index: 1;
-  border: 1px solid rgba(243, 141, 141, 0.25);
 }
 
 header h1{
   font-weight: bold;
-  font-size: 4vw; /* responsive */
+  font-size: 4vw;
   color: rgb(165, 105, 49);
   text-shadow: 2px 2px 4px black;
 }
 
 header h2{
   font-weight: bold;
-  font-size: 4vw; /* responsive */
+  font-size: 4vw;
   color: rgb(56, 30, 6);
   text-shadow: 2px 2px 4px black;
 }
@@ -78,6 +66,7 @@ header h2{
     margin: 1rem;
     border: black solid;
     padding: 6px;
+    content: Menu;
 }
 
 .menu-toggle span {
@@ -89,27 +78,32 @@ header h2{
 
 }
 
-/* Toggle animation */
-.menu-toggle.active span:nth-child(1) {
-   transform: rotate(90deg) translateY(13px) translateX(8px);
-}
-
-.menu-toggle.active span:nth-child(2) {
-    transform: rotate(90deg) translateX(-3px);
-
-}
-
-.menu-toggle.active span:nth-child(3) {
-    transform: rotate(90deg) translateX(-13px) translateY(-12px);
+.menu-links span {
+  background-color: red;
 }
 
 /* Links show/hide */
 .menu-links {
   display: none;
   flex-direction: column;
+  justify-content: space-between;
   margin-top: 1rem;
 }
 
 .menu-links.active {
   display: flex;
+}
+
+/* Toggle animation */
+.menu-toggle.active span:nth-child(1) {
+   transform: rotate(90deg) translateX(10px) translateY(13px);
+}
+
+.menu-toggle.active span:nth-child(2) {
+    transform: rotate(90deg) translateX(0px);
+
+}
+
+.menu-toggle.active span:nth-child(3) {
+    transform: rotate(90deg) translateX(-11px) translateY(-12px);
 }
